@@ -15,7 +15,7 @@ public class FileHelper {
     }
 
     public static HashMap<Long,String> getUsersDefault() throws IOException {
-        HashMap<Long, String> map = new HashMap<Long, String>();
+        HashMap<Long, String> map = new HashMap<>();
         Properties properties = new Properties();
         properties.load(new FileInputStream("data.properties"));
 

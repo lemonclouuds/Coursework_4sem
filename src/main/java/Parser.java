@@ -22,11 +22,11 @@ public class Parser {
     }
 
     public static HashMap<String, Bank> initialize() {
-        HashMap<String, Bank> parsed = new HashMap<String, Bank>();
+        HashMap<String, Bank> parsed = new HashMap<>();
         try {
             Document doc = getPage();
             Elements info = doc.select("[data-bank_id]");
-            int i = 0;
+
             for (Element elem: info) {
                 if (elem.text().startsWith("Беларусбанк")) {
                     parsed.put("беларусбанк", new Bank(removeLastValue(elem.text(), 2)));
